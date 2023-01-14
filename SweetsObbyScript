@@ -1,0 +1,405 @@
+													-- Sweets Obby OP Script --
+
+-- Este es PÚBLICAMENTE el PRIMER SCRIPT de este juego.
+-- Para contactar conmigo escribeme en los comentarios de mi cuenta de tiktok @therobloxscriptshowcaser.
+-- Este script esta no está hecho con fines de lucro, solo para que el creador vea lo sencillo que es hackear su juego, por eso lo hago, para que se pueda mejorar la seguridad.
+
+-- ANTES DE USAR, VER MI VIDEO EN TIKTOK!!!
+
+-- Variables y diseño de objetos (NO CAMBIAR NADA, DE LO CONTRARIO NO FUNCIONARA.)
+
+local SweetsObbyExploit = Instance.new("ScreenGui")
+SweetsObbyExploit.Name = "SweetsObbyExploit"
+SweetsObbyExploit.Parent = game.Players.LocalPlayer.PlayerGui
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = SweetsObbyExploit
+MainFrame.BackgroundColor3 = Color3.fromRGB(67,67,67)
+MainFrame.Position = UDim2.new(0.276, 0,0.131, 0)
+MainFrame.Size = UDim2.new(0, 744,0, 597)
+
+local Cerrar = Instance.new("TextButton")
+Cerrar.Name = "Cerrar"
+Cerrar.Parent = MainFrame
+Cerrar.BackgroundColor3 = Color3.fromRGB(255,103,103)
+Cerrar.Position = UDim2.new(1.012, 0,0, 0)
+Cerrar.Size = UDim2.new(0, 98,0, 98)
+Cerrar.Font = Enum.Font.FredokaOne
+Cerrar.Text = "X"
+Cerrar.TextColor3 = Color3.fromRGB(255,255,255)
+Cerrar.TextScaled = true
+
+local Caminos = Instance.new("TextButton")
+Caminos.Name = "Caminos"
+Caminos.Parent = MainFrame
+Caminos.BackgroundColor3 = Color3.fromRGB(47,47,47)
+Caminos.Position = UDim2.new(0.103, 0,0.358, 0)
+Caminos.Size = UDim2.new(0, 590,0, 57)
+Caminos.Font = Enum.Font.Highway
+Caminos.Text = "CONSEGUIR TODOS LOS CAMINOS DEL FINAL [NUEVO]"
+Caminos.TextColor3 = Color3.fromRGB(255,255,255)
+Caminos.TextScaled = true
+
+local Comandos = Instance.new("TextButton")
+Comandos.Name = "Comandos"
+Comandos.Parent = MainFrame
+Comandos.BackgroundColor3 = Color3.fromRGB(47,47,47)
+Comandos.Position = UDim2.new(0.103, 0,0.482, 0)
+Comandos.Size = UDim2.new(0, 590,0, 57)
+Comandos.Font = Enum.Font.Highway
+Comandos.Text = "COMANDOS DE ADMINISTRADOR [EN TRABAJO]"
+Comandos.TextColor3 = Color3.fromRGB(255,255,255)
+Comandos.TextScaled = true
+
+local Minimizar = Instance.new("TextButton")
+Minimizar.Name = "Minimizar"
+Minimizar.Parent = MainFrame
+Minimizar.BackgroundColor3 = Color3.fromRGB(255, 174, 103)
+Minimizar.Position = UDim2.new(1.012, 0,0.179, 0)
+Minimizar.Size = UDim2.new(0, 98,0, 98)
+Minimizar.Font = Enum.Font.FredokaOne
+Minimizar.Text = ">"
+Minimizar.TextColor3 = Color3.fromRGB(255,255,255)
+Minimizar.TextScaled = true
+
+local Completar = Instance.new("TextButton")
+Completar.Name = "Completar"
+Completar.Parent = MainFrame
+Completar.BackgroundColor3 = Color3.fromRGB(47,47,47)
+Completar.Position = UDim2.new(0.103, 0,0.235, 0)
+Completar.Size = UDim2.new(0, 590,0, 57)
+Completar.Font = Enum.Font.Highway
+Completar.Text = "COMPLETAR TODOS LOS NIVELES [OP!]"
+Completar.TextColor3 = Color3.fromRGB(255,255,255)
+Completar.TextScaled = true
+
+local TeletransporteBoton = Instance.new("TextButton")
+TeletransporteBoton.Name = "TeletransporteBoton"
+TeletransporteBoton.Parent = MainFrame
+TeletransporteBoton.BackgroundColor3 = Color3.fromRGB(90, 139, 255)
+TeletransporteBoton.Position = UDim2.new(0.203, 0,0.879, 0)
+TeletransporteBoton.Size = UDim2.new(0, 441,0, 42)
+TeletransporteBoton.Font = Enum.Font.Highway
+TeletransporteBoton.Text = "TELETRANSPORTE"
+TeletransporteBoton.TextColor3 = Color3.fromRGB(255,255,255)
+TeletransporteBoton.TextScaled = true
+
+local TpBox = Instance.new("TextBox")
+TpBox.Name = "TpBox"
+TpBox.Parent = MainFrame
+TpBox.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+TpBox.Position = UDim2.new(0.208, 0,0.688, 0)
+TpBox.Size = UDim2.new(0, 434,0, 84)
+TpBox.Font = Enum.Font.Highway
+TpBox.Text = ""
+TpBox.PlaceholderText = "Usuario de a quién quieres teletransportarte"
+TpBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TpBox.TextColor3 = Color3.fromRGB(255,255,255)
+TpBox.TextScaled = true
+
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundTransparency = 1
+Title.Position = UDim2.new(0, 0,0.027, 0)
+Title.Size = UDim2.new(0, 744,0, 83)
+Title.Font = Enum.Font.Highway
+Title.Text = "SWEETS OBBY"
+Title.TextColor3 = Color3.fromRGB(255,255,255)
+Title.TextScaled = true
+
+local Teletransporte = Instance.new("TextLabel")
+Teletransporte.Name = "Teletransporte"
+Teletransporte.Parent = MainFrame
+Teletransporte.BackgroundTransparency = 1
+Teletransporte.Position = UDim2.new(0.355, 0,0.598, 0)
+Teletransporte.Size = UDim2.new(0, 216,0, 47)
+Teletransporte.Font = Enum.Font.Highway
+Teletransporte.Text = "TELETRANSPORTE"
+Teletransporte.TextColor3 = Color3.fromRGB(255,255,255)
+Teletransporte.TextScaled = true
+
+-- Corners, para que se vea mejor estéticamente hablando (NO CAMBIAR NADA).
+
+local MainFrameCorner = Instance.new("UICorner")
+MainFrameCorner.Name = "MainFrameCorner"
+MainFrameCorner.Parent = MainFrame
+
+local CerrarCorner = Instance.new("UICorner")
+CerrarCorner.Name = "MainFrameCorner"
+CerrarCorner.Parent = Cerrar
+
+local CaminosCorner = Instance.new("UICorner")
+CaminosCorner.Name = "MainFrameCorner"
+CaminosCorner.Parent = Caminos
+
+local ComandosCorner = Instance.new("UICorner")
+ComandosCorner.Name = "MainFrameCorner"
+ComandosCorner.Parent = Comandos
+
+local MinimizarCorner = Instance.new("UICorner")
+MinimizarCorner.Name = "MinimizarCorner"
+MinimizarCorner.Parent = Minimizar
+
+local CompletarCorner = Instance.new("UICorner")
+CompletarCorner.Name = "CompletarCorner"
+CompletarCorner.Parent = Completar
+
+local TeletransportarseBotonCorner = Instance.new("UICorner")
+TeletransportarseBotonCorner.Name = "TeletransportarseBotonCorner"
+TeletransportarseBotonCorner.Parent = TeletransporteBoton
+
+local ComandosCorner = Instance.new("UICorner")
+ComandosCorner.Name = "MainFrameCorner"
+ComandosCorner.Parent = Comandos
+
+local TpBoxCorner = Instance.new("UICorner")
+TpBoxCorner.Name = "TpBoxCorner"
+TpBoxCorner.Parent = TpBox
+
+-- Haciendo que cada cosa haga su función (NO TOCAR POR NADA DEL MUNDO, SE ROMPERÁ).
+
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+Cerrar.MouseButton1Click:Connect(function()
+	MainFrame.Visible = false
+end)
+
+local userInputService = game:GetService("UserInputService")
+
+userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+	if input.UserInputType == Enum.UserInputType.Keyboard then
+		if input.KeyCode == Enum.KeyCode.LeftAlt then
+			if MainFrame.Visible == true then
+				MainFrame.Visible = false
+			elseif MainFrame.Visible == false then
+				MainFrame.Visible = true
+			end
+		end
+	end
+end)
+
+SweetsObbyExploit.ResetOnSpawn = false
+
+Caminos.MouseButton1Click:Connect(function()
+	local RainbowPathGiver = game:GetService("Workspace")["By: LCPLgeek"]["Rainbow Ball Path Giver"]["PUT THE WEAPON IN THIS BRICK"]["Rainbow Ball Path"]:Clone()
+
+	RainbowPathGiver.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Completar.MouseButton1Click:Connect(function()
+	local Player = game.Players.LocalPlayer
+	local Stage = Player.leaderstats.Stage
+	
+	local deb = false
+	
+	if Stage.Value > 1 then
+		if not deb then
+			deb = true
+			Completar.Text = "TIENES QUE ESTAR EN EL NIVEL 1!"
+			Completar.TextColor3 = Color3.fromRGB(255, 0, 0)
+			wait(2)
+			deb = false
+			Completar.Text = "COMPLETAR TODOS LOS NIVELES [OP!]"
+			Completar.TextColor3 = Color3.fromRGB(255,255,255)
+		end
+	else
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["1"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["2"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["3"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["4"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["5"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["6"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["7"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["8"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["9"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["10"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["11"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["12"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["13"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["14"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["15"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["16"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["17"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["18"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["19"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["20"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["21"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["22"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["23"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["24"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["25"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["26"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["27"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["28"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["29"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["30"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["31"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["32"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["33"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["34"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["35"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["36"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["37"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["38"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["39"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["40"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["41"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["42"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["43"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["44"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["45"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["46"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["47"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["48"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["49"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["50"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["51"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["52"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["53"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["54"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["55"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["56"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["57"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["58"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["59"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["60"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["61"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["62"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["63"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["64"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["65"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["66"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["67"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["68"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["69"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["70"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["71"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["72"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["73"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["74"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["75"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["76"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["77"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["78"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["79"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["80"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["81"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["82"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["83"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["84"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["85"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["86"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["87"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["88"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["89"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["90"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["91"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["92"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["93"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["94"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["95"].Position) + Vector3.new(0,5,0)
+		wait(0.1)
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace["96"].Position) + Vector3.new(0,5,0)
+	end
+end)
+
+TeletransporteBoton.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players:WaitForChild(TpBox.Text).Character.HumanoidRootPart.Position)
+end)
