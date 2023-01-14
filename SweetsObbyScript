@@ -164,7 +164,7 @@ MainFrame.Active = true
 MainFrame.Draggable = true
 
 Cerrar.MouseButton1Click:Connect(function()
-	MainFrame.Visible = false
+	MainFrame:Destroy()
 end)
 
 local userInputService = game:GetService("UserInputService")
