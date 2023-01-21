@@ -41,16 +41,16 @@ Caminos.Text = "CONSEGUIR TODOS LOS CAMINOS DEL FINAL [NUEVO]"
 Caminos.TextColor3 = Color3.fromRGB(255,255,255)
 Caminos.TextScaled = true
 
-local Comandos = Instance.new("TextButton")
-Comandos.Name = "Comandos"
-Comandos.Parent = MainFrame
-Comandos.BackgroundColor3 = Color3.fromRGB(47,47,47)
-Comandos.Position = UDim2.new(0.103, 0,0.482, 0)
-Comandos.Size = UDim2.new(0, 590,0, 57)
-Comandos.Font = Enum.Font.Highway
-Comandos.Text = "COMANDOS DE ADMINISTRADOR [EN TRABAJO]"
-Comandos.TextColor3 = Color3.fromRGB(255,255,255)
-Comandos.TextScaled = true
+local Gamepasses = Instance.new("TextButton")
+Gamepasses.Name = "Gamepasses"
+Gamepasses.Parent = MainFrame
+Gamepasses.BackgroundColor3 = Color3.fromRGB(47,47,47)
+Gamepasses.Position = UDim2.new(0.103, 0,0.482, 0)
+Gamepasses.Size = UDim2.new(0, 590,0, 57)
+Gamepasses.Font = Enum.Font.Highway
+Gamepasses.Text = "CONSEGUIR GAMEPASSES [NUEVO]"
+Gamepasses.TextColor3 = Color3.fromRGB(255,255,255)
+Gamepasses.TextScaled = true
 
 local Minimizar = Instance.new("TextButton")
 Minimizar.Name = "Minimizar"
@@ -150,9 +150,9 @@ local TeletransportarseBotonCorner = Instance.new("UICorner")
 TeletransportarseBotonCorner.Name = "TeletransportarseBotonCorner"
 TeletransportarseBotonCorner.Parent = TeletransporteBoton
 
-local ComandosCorner = Instance.new("UICorner")
-ComandosCorner.Name = "MainFrameCorner"
-ComandosCorner.Parent = Comandos
+local GamepassesCorner = Instance.new("UICorner")
+Gamepasses.Name = "MainFrameCorner"
+Gamepasses.Parent = Gamepasses
 
 local TpBoxCorner = Instance.new("UICorner")
 TpBoxCorner.Name = "TpBoxCorner"
@@ -402,4 +402,13 @@ end)
 
 TeletransporteBoton.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players:WaitForChild(TpBox.Text).Character.HumanoidRootPart.Position)
+end)
+
+Gamepasses.MouseButton1Click:Connect(function()
+	local replicatedStorage = game:GetService("ReplicatedStorage")
+	
+	replicatedStorage.GravityCoilEvent:FireServer()
+	replicatedStorage.BoomboxEvent:FireServer()
+	replicatedStorage.SpeedCoilEvent:FireServer()
+	replicatedStorage.RainbowCarpetEvent:FireServer()
 end)
