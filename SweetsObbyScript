@@ -151,8 +151,8 @@ TeletransportarseBotonCorner.Name = "TeletransportarseBotonCorner"
 TeletransportarseBotonCorner.Parent = TeletransporteBoton
 
 local GamepassesCorner = Instance.new("UICorner")
-Gamepasses.Name = "GamepassesCorner"
-Gamepasses.Parent = Gamepasses
+GamepassesCorner.Name = "GamepassesCorner"
+GamepassesCorner.Parent = Gamepasses
 
 local TpBoxCorner = Instance.new("UICorner")
 TpBoxCorner.Name = "TpBoxCorner"
